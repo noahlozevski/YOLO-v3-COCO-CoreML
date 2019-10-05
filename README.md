@@ -2,13 +2,15 @@
 
 This project aims to increase the safety and public usability of electric scooters, specifically the Xiaomi M365 model. 
 
-## YOLOv3 on COCO dataset
+## Goals
 
 The M365 model of scooter was the first deployed using a ridesharing model by Bird. The company purchased thousands of these scooters, modifying them slightly by electrical and mechanical means. To increase stability and durability of these scooters, Bird implemented a custom brace to replace the folding mechanism present on consumer models. They also replaced the standard Bluetooth controller with a custom circuit board, adding cellular and GPS capabilities to allow for their app integration. The app functionality is simple; the user finds a scooter of their choosing on the street/sidewalk, scans the QR code present at the top of the scooter in the app, then an unlock code is sent via cellular connection to the scooter for use.
 
 However, Bird and other companies similar (Lime, Spin, Jump, etc.) have failed to enforce rules or city/street regulations of their users. This is partly due to the lack of functionality in the app, as there are not any checks of the user's identification or driver's license after the first unlock/account setup. Furthermore, many cities have drafted laws banning these scooters due to the average user's failure to adhere to road signs and general riding ability.
 
 The scooters themselves are not too difficult for most people to ride, but it is disappointing that the companies deploying them did not add additional functionality in their app that could increase safety of the users, other drivers on the road, while also enforcing city laws. This project applies the use of a YOLOv3 CoreML model running on a mobile device (iPhone XS) to detect road signs, obstacles, and people that are in the scooter's path. Using Bluetooth communication, the application can send commands to slow down or stop the scooter, as well as notify the user of warnings they may not have time to react to.
+
+## Credits/Creation Info
 
 This is a branch and combination of several projects on GitHub. The main [YOLOv3 CNN Model](https://github.com/0xPr0xy/YOLO-v3-COCO-CoreML/blob/master/YOLO-CoreML/yolo.mlmodel) is included in this repository. Credit goes to CamiAlfa for documenting the BLE communication protocols/commands on his [project](https://github.com/CamiAlfa/M365-BLE-PROTOCOL). Credit also goes to michaljach for creating a [Swift API](https://github.com/michaljach/m365-info) that serializes and reads commands between compatible devices.
 
