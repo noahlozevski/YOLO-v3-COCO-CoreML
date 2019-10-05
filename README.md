@@ -23,4 +23,4 @@ The application commited is functional for the commands mentioned above and is c
 
 Preview:
 
-![](preview.png)
+![](preview.jpeg)
